@@ -1,0 +1,24 @@
+name: Deploy and Host
+
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: Build
+      run: |
+        npm install
+        npm run build
+    - name: Deploy
+      run: |
+        npm i -g firebase-tools
+        firebase deploy --token "${{ secrets.FIREBASE_TOKEN }}"
