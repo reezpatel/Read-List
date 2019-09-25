@@ -1,6 +1,6 @@
 # My Reads
 
-notebook: :green_book: My Reads :blue_book: :orange_book:
+:notebook: :green_book: My Reads :blue_book: :orange_book:
 is PWA application can enable users to save link, and allow them to read it later. It is as simple as share and forget!!
 Installing this PWA will enable users to share link for any share target. 
 
